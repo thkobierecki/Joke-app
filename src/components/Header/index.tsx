@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <LogoTitle>JokeApp</LogoTitle>
-      <AddNewButton>
+      {/* <AddNewButton>
         <Icon as={IoAddOutline} />
         Add new joke
-      </AddNewButton>
+      </AddNewButton> */}
     </HeaderWrapper>
   );
 };
@@ -32,31 +32,31 @@ const LogoTitle = styled.span`
   font-size: 1.5rem;
   letter-spacing: 0.1.5px;
 `;
-const AddNewButton = styled.button`
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  font-weight: 500;
-  color: ${({ theme }) => theme.fontActive};
-  border: 1px solid ${({ theme }) => theme.fontActive};
-  box-shadow: none;
-  border-radius: 5px;
-  padding: 0 8px;
-  height: 40px;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  cursor: pointer;
-  :focus,
-  :active {
-    outline: none;
-  }
-`;
+// const AddNewButton = styled.button`
+//   display: flex;
+//   text-decoration: none;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: transparent;
+//   font-weight: 500;
+//   color: ${({ theme }) => theme.fontActive};
+//   border: 1px solid ${({ theme }) => theme.fontActive};
+//   box-shadow: none;
+//   border-radius: 5px;
+//   padding: 0 8px;
+//   height: 40px;
+//   font-size: 16px;
+//   line-height: 20px;
+//   text-decoration: none;
+//   cursor: pointer;
+//   :focus,
+//   :active {
+//     outline: none;
+//   }
+// `;
 
-const Icon = styled.i`
-  color: ${({ theme }) => theme.fontActive};
-  font-size: 16px;
-  margin-right: 5px;
-`;
+// const Icon = styled.i`
+//   color: ${({ theme }) => theme.fontActive};
+//   font-size: 16px;
+//   margin-right: 5px;
+// `;
