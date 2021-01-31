@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 type Props = {
   categories: CategoryType[];
   currentCategory: CategoryType;
-  totalCount: number;
+  totalCount: number | null;
   handleSetActiveCategory: (category: CategoryType) => void;
   handleSearchJokes: (inputSearch: string) => void;
 };
@@ -35,6 +35,7 @@ const ControlPanel = ({
           {categories &&
             categories.map((category: CategoryType) => (
               <Chip
+                key={`chip-${category}`}
                 value={category}
                 handleClick={() => handleSetActiveCategory(category)}
                 active={isActive(category)}

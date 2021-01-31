@@ -1,4 +1,4 @@
-import React, { ReactChildren, ReactChild } from "react";
+import React, { ReactChildren, ReactChild, useState } from "react";
 import styled from "styled-components";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -9,14 +9,17 @@ type MainTemplateProps = {
 };
 
 const MainTemplate = ({ children }: MainTemplateProps) => {
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const handleOpenModal = () => setModalOpen(true);
+  const handleCloseModal = () => setModalOpen(false);
   return (
     <>
       <TemplateContainer>
-        <Header />
+        <Header handleOpenModal={handleOpenModal} />
         <ContentWrapper>{children}</ContentWrapper>
         <Footer />
       </TemplateContainer>
-      {/* <Modal /> */}
+      {isModalOpen && <Modal handleCloseModal={handleCloseModal} />}
     </>
   );
 };

@@ -23,10 +23,10 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <div>
+        <>
           <GlobalStyle />
           <JokeAppView />
-        </div>
+        </>
       </Provider>
     </ThemeProvider>
   </React.StrictMode>,

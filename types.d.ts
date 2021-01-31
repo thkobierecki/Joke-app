@@ -38,3 +38,11 @@ interface GetJokesRes {
   amount: number;
   jokes: IJoke[];
 }
+
+interface SubmitJokeData {
+  category: CategoryType;
+  type: "single" | "twopart";
+  joke?: string;
+  setup?: string;
+  delivery?: string;
+}
